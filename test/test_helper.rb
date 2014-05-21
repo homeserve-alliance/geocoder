@@ -185,6 +185,13 @@ module Geocoder
         "geocodio_1101_pennsylvania_ave"
       end
     end
+
+    class PostcodeAnywhereUk
+      private
+      def fixture_prefix
+        'postcode_anywhere_uk_geocode_v200'
+      end
+    end
   end
 end
 
