@@ -1,3 +1,3 @@
 module Geocoder
-  VERSION = "1.3.0.hsa"
+  VERSION = "1.4.0.hsa"
 end
