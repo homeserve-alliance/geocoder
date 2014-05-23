@@ -40,6 +40,7 @@ module Geocoder
         :smarty_streets,
         :postcode_anywhere_uk,
         :postcode_anywhere_address,
+        :postcode_anywhere_address_fetch,
         :test
       ]
     end
