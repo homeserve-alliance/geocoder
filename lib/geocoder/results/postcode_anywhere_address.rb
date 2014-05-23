@@ -4,7 +4,8 @@ module Geocoder::Result
   class PostcodeAnywhereAddress < Base
 
     def coordinates
-      warn '[Warning]: PostcodeAnywhereAddress lookup does not support coordinates. Please use PostcodeAnywhereUk lookup to Geocode a location.'
+      warn '[Warning]: PostcodeAnywhereAddress lookup does not support coordinates. '\
+        'Please use PostcodeAnywhereUk lookup to Geocode a location.'
       [0.0, 0.0]
     end
 
@@ -37,6 +38,12 @@ module Geocoder::Result
 
     def id
       @data['Id']
+    end
+
+    # Request the specific address information for this Result.
+    # This will make another request to PostcodeAnywhere with the id.
+    def fetch
+      Geocoder::Query.new(address, fetch_id: id, lookup: :postcode_anywhere_address_fetch).execute
     end
   end
 end
