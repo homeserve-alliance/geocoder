@@ -4,7 +4,8 @@ module Geocoder::Result
   class PostcodeAnywhereAddress < Base
 
     def coordinates
-      []
+      warn '[Warning]: PostcodeAnywhereAddress lookup does not support coordinates. Please use PostcodeAnywhereUk lookup to Geocode a location.'
+      [0.0, 0.0]
     end
 
     def blank_result
@@ -20,16 +21,18 @@ module Geocoder::Result
     end
     alias_method :street_address, :address
 
-    def place
-      @data['Place']
-    end
-
     def country
       'United Kingdom'
     end
 
     def country_code
       'UK'
+    end
+
+    # PostcodeAnywhereAddress specific reponse attrs
+
+    def place
+      @data['Place']
     end
 
     def id
