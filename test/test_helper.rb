@@ -196,6 +196,17 @@ module Geocoder
         "#{fixture_prefix}_romsey"
       end
     end
+
+    class PostcodeAnywhereAddress
+      private
+      def fixture_prefix
+        'postcode_anywhere_address_v1_x'
+      end
+
+      def default_fixture_filename
+        "#{fixture_prefix}_N19AE"
+      end
+    end
   end
 end
 
