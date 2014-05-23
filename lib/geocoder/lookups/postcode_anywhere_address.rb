@@ -5,14 +5,9 @@ module Geocoder::Lookup
   class PostcodeAnywhereAddress < PostcodeAnywhereBase
 
     BASE_URL_ADDRESS_V1_10 = 'services.postcodeanywhere.co.uk/PostcodeAnywhere/Interactive/Find/v1.10/json.ws'
-    BASE_URL_ADDRESS_FETCH_V1_30 = 'services.postcodeanywhere.co.uk/PostcodeAnywhere/Interactive/RetrieveById/v1.30/json.ws?'
 
     def name
       'PostcodeAnywhereAddress'
-    end
-
-    def required_api_key_parts
-      %w(key)
     end
 
     def query_url(query)
@@ -29,6 +24,5 @@ module Geocoder::Lookup
         :key => configuration.api_key
       }.merge(super)
     end
-
   end
 end

@@ -3,6 +3,10 @@ require 'geocoder/lookups/base'
 module Geocoder::Lookup
   class PostcodeAnywhereBase < Base
 
+    def required_api_key_parts
+      %w(key)
+    end
+
     private
 
     def results(query)

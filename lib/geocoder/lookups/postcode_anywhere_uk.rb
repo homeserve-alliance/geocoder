@@ -10,10 +10,6 @@ module Geocoder::Lookup
       'PostcodeAnywhereUk'
     end
 
-    def required_api_key_parts
-      %w(key)
-    end
-
     def query_url(query)
       format('%s://%s?%s', protocol, BASE_URL_GEOCODE_V2_00, url_query_string(query))
     end
