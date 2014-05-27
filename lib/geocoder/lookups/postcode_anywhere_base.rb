@@ -7,7 +7,11 @@ module Geocoder::Lookup
       %w(key)
     end
 
-    private
+    def name
+      self.class.name
+    end
+
+    protected
 
     def results(query)
       response = fetch_data(query)
