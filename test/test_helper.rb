@@ -213,11 +213,11 @@ module Geocoder
     class PostcodeAnywhereAddressFetch
       private
       def fixture_prefix
-        'postcode_anywhere_address_v1_x'
+        'postcode_anywhere_address_fetch_v1_x'
       end
 
       def default_fixture_filename
-        "#{fixture_prefix}_N19AE"
+        "#{fixture_prefix}_50782641"
       end
     end
   end
