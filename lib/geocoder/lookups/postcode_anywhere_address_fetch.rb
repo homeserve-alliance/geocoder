@@ -13,12 +13,8 @@ module Geocoder::Lookup
     private
 
     def query_url_params(query)
-      # We require the fetch_id param here. Raise or not to raise?
-      fetch_id = query.options[:fetch_id] || ''
-
       {
-        :id => fetch_id,
-        :searchterm => query.sanitized_text, # not calling this breaks lots of so called 'tests'
+        :id => query.sanitized_text,
         :preferredlanguage => 'english',
         :filter => 'none',
         :key => configuration.api_key

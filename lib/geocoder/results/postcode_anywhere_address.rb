@@ -43,7 +43,7 @@ module Geocoder::Result
     # Request the specific address information for this Result.
     # This will make another request to PostcodeAnywhere with the id.
     def fetch
-      Geocoder::Query.new(address, fetch_id: id, lookup: :postcode_anywhere_address_fetch).execute
+      Geocoder::Query.new(id, lookup: :postcode_anywhere_address_fetch).execute
     end
   end
 end

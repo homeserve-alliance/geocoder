@@ -10,7 +10,7 @@ class PostcodeAnywhereAddressFetchTest < GeocoderTestCase
   end
 
   def test_result_components_with_fetch
-    results = Geocoder.search('50782641', fetch_id: '50782641.00')
+    results = Geocoder.search('50782641.00')
 
     assert_equal 1, results.size
     assert_equal 'Kings Gate, 1 Bravingtons Walk, London, N1 9AE', results.first.street_address
