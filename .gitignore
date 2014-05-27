@@ -5,3 +5,5 @@ rdoc/*
 Gemfile.lock
 api_keys.yml
 .rvmrc
+.ruby-version
+.ruby-gemset
