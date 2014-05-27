@@ -18,7 +18,7 @@ module Geocoder::Lookup
 
       {
         :id => fetch_id,
-        :searchterm => query.sanitized_text, # removing this breaks lots of so called 'tests'
+        :searchterm => query.sanitized_text, # not calling this breaks lots of so called 'tests'
         :preferredlanguage => 'english',
         :filter => 'none',
         :key => configuration.api_key
