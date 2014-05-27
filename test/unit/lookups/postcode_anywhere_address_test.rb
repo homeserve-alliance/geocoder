@@ -31,7 +31,10 @@ class PostcodeAnywhereAddressTest < GeocoderTestCase
   end
 
   def test_result_fetch
-    # pending...
+    result = Geocoder.search('N1 9AE').first
+
+    fetch_results = result.fetch
+    assert fetch_results.first.is_a?(Geocoder::Result::PostcodeAnywhereAddressFetch)
   end
 
   def test_no_results
