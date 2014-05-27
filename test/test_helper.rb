@@ -75,12 +75,10 @@ module Geocoder
     class Base
       private
       def fixture_exists?(filename)
-        #puts "FFFFFFFFFFFNAME #{filename}"
         File.exist?(File.join("test", "fixtures", filename))
       end
 
       def read_fixture(file)
-        #puts "FFFFFFFFFFF #{file}"
         filepath = File.join("test", "fixtures", file)
         s = File.read(filepath).strip.gsub(/\n\s*/, "")
         s.instance_eval do
