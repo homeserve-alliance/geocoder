@@ -2,7 +2,7 @@ require 'geocoder/lookups/base'
 
 module Geocoder::Lookup
   class PostcodeAnywhereBase < Base
-    DAILY_LIMIT_EXEEDED_ERROR_CODES = ['8', '17'] # api docs say these two codes are the same error
+    DAILY_LIMIT_EXCEEDED_ERROR_CODES = ['8', '17'] # api docs say these two codes are the same error
     INVALID_API_KEY_ERROR_CODE = '2'
 
     def required_api_key_parts
@@ -25,7 +25,7 @@ module Geocoder::Lookup
 
     def raise_exception_for_response(response)
       case response['Error']
-      when *DAILY_LIMIT_EXEEDED_ERROR_CODES
+      when *DAILY_LIMIT_EXCEEDED_ERROR_CODES
         raise_error(Geocoder::OverQueryLimitError, response['Cause']) || warn(response['Cause'])
       when INVALID_API_KEY_ERROR_CODE
         raise_error(Geocoder::InvalidApiKey, response['Cause']) || warn(response['Cause'])
