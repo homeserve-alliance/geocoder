@@ -6,10 +6,6 @@ module Geocoder::Lookup
     # API documentation: http://www.postcodeanywhere.co.uk/Support/WebService/Geocoding/UK/Geocode/2/
     BASE_URL_GEOCODE_V2_00 = 'services.postcodeanywhere.co.uk/Geocoding/UK/Geocode/v2.00/json.ws'
 
-    def name
-      'PostcodeAnywhereUk'
-    end
-
     def query_url(query)
       format('%s://%s?%s', protocol, BASE_URL_GEOCODE_V2_00, url_query_string(query))
     end
