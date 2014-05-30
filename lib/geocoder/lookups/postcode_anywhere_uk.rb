@@ -3,7 +3,7 @@ require 'geocoder/results/postcode_anywhere_uk'
 
 module Geocoder::Lookup
   class PostcodeAnywhereUk < PostcodeAnywhereBase
-
+    # API documentation: http://www.postcodeanywhere.co.uk/Support/WebService/Geocoding/UK/Geocode/2/
     BASE_URL_GEOCODE_V2_00 = 'services.postcodeanywhere.co.uk/Geocoding/UK/Geocode/v2.00/json.ws'
 
     def name
