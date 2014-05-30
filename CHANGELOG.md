@@ -3,6 +3,16 @@ Changelog
 
 Major changes to Geocoder for each release. Please see the Git log for complete list of changes.
 
+1.2.3 (2014 May 30)
+-------------------
+
+* Add :postcode_anywhere_address and :postcode_anywhere_address_fetch lookups. These are PostcodeAnywhere address services and are designed to be used in conjunction with one another. Whilst not true geocoding services it is preferable to add to this gem for its API.
+
+1.2.2 (2014 May 30)
+-------------------
+
+* Add :postcode_anywhere_uk lookup
+
 1.2.1 (2014 May 12)
 -------------------
 
