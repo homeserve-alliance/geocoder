@@ -3,6 +3,10 @@ require 'geocoder/results/base'
 module Geocoder::Result
   class PostcodeAnywhereAddressFetch < Base
 
+    # This API does not return any co-ords for a result, we need to return a
+    # pair of floats here though.
+    # It is prefereable to implement this API via the Geocode gem despite not
+    # technically geocoding a request.
     def coordinates
       warn '[Warning]: PostcodeAnywhereAddressFetch lookup does not support coordinates. '\
         'Please use PostcodeAnywhereUk lookup to Geocode a location.'
@@ -25,14 +29,15 @@ module Geocoder::Result
     end
 
     def country
-      'United Kingdom'
+      @data['CountryName']
     end
 
     def country_code
       @data['CountryISO2']
     end
 
-    # PostcodeAnywhereAddress specific reponse attrs
+    # PostcodeAnywhereAddress specific reponse attrs; List all keys and
+    # then create methods for each.
     def self.response_attributes
       %w(Udprn Company Department Line1 Line2 Line3 Line4 Line5 PostTown County
           Postcode Mailsort Barcode Type DeliveryPointSuffix SubBuilding BuildingName
