@@ -3,6 +3,11 @@ Changelog
 
 Major changes to Geocoder for each release. Please see the Git log for complete list of changes.
 
+1.2.2 (2014 May 30)
+-------------------
+
+* Add :postcode_anywhere_uk lookup
+
 1.2.1 (2014 May 12)
 -------------------
 

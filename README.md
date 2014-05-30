@@ -636,6 +636,19 @@ You can replace `city` with `country` in any of the above tasks, generators, and
 * **Limitations**: Only good for non-commercial use. For commercial usage please check http://developer.baidu.com/map/question.htm#qa0013
 * **Notes**: To use Baidu set `Geocoder.configure(:lookup => :baidu_ip, :api_key => "your_api_key")`.
 
+#### PostcodeAnywhere Uk (`:postcode_anywhere_uk`)
+
+This uses the PostcodeAnywhere UK Geocode service, this will geocode any string from UK postcode, placename, point of interest or location.
+
+* **API key**: required
+* **Quota**: Dependant on service plan?
+* **Region**: UK
+* **SSL support**: yes
+* **Languages**: English
+* **Documentation**: [http://www.postcodeanywhere.co.uk/Support/WebService/Geocoding/UK/Geocode/2/](http://www.postcodeanywhere.co.uk/Support/WebService/Geocoding/UK/Geocode/2/)
+* **Terms of Service**: ?
+* **Limitations**: ?
+* **Notes**: To use PostcodeAnywhere you must include an API key: `Geocoder.configure(:lookup => :postcode_anywhere_uk, :api_key => 'your_api_key')`.
 
 Caching
 -------
