@@ -10,7 +10,7 @@ module Geocoder::Result
     def coordinates
       warn '[Warning]: PostcodeAnywhereAddressFetch lookup does not support coordinates. '\
         'Please use PostcodeAnywhereUk lookup to Geocode a location.'
-      [0.0, 0.0]
+      [Float::INFINITY, Float::INFINITY]
     end
 
     def blank_result

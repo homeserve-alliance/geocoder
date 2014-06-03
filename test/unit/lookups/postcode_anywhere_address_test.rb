@@ -17,7 +17,7 @@ class PostcodeAnywhereAddressTest < GeocoderTestCase
     assert_equal 'High Fliers Publications Ltd', results.first.address
     assert_equal 'Kings Gate 1 Bravingtons Walk London N1', results.first.place
     assert_equal '50782641.00', results.first.id
-    assert_equal [0.0, 0.0], results.first.coordinates
+    assert_equal [Float::INFINITY, Float::INFINITY], results.first.coordinates
     assert_equal '', results.first.city
     assert results.first.is_a?(Geocoder::Result::PostcodeAnywhereAddress)
 
@@ -25,7 +25,7 @@ class PostcodeAnywhereAddressTest < GeocoderTestCase
     assert_equal 'High Fliers Research Ltd', results.last.address
     assert_equal 'Kings Gate 1 Bravingtons Walk London N1', results.last.place
     assert_equal '50782643.00', results.last.id
-    assert_equal [0.0, 0.0], results.first.coordinates
+    assert_equal [Float::INFINITY, Float::INFINITY], results.first.coordinates
     assert_equal '', results.last.city
     assert results.last.is_a?(Geocoder::Result::PostcodeAnywhereAddress)
   end
