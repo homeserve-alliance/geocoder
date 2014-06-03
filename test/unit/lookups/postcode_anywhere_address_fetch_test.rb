@@ -16,7 +16,7 @@ class PostcodeAnywhereAddressFetchTest < GeocoderTestCase
     assert_equal 'Kings Gate, 1 Bravingtons Walk, London, N1 9AE', results.first.street_address
     assert_equal 'Kings Gate, 1 Bravingtons Walk, London, N1 9AE', results.first.address
     assert_equal '50782641', results.first.udprn
-    assert_equal [0.0, 0.0], results.first.coordinates
+    assert_equal [Float::INFINITY, Float::INFINITY], results.first.coordinates
     assert_equal 'High Fliers Publications Ltd', results.first.company
     assert_equal '', results.first.department
     assert_equal 'Kings Gate', results.first.line1
