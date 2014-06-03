@@ -7,6 +7,7 @@ group :development, :test do
   gem 'geoip'
   gem 'rubyzip'
   gem 'rails'
+  gem 'minitest', '~> 4.7'
 
   platforms :mri do
     gem 'debugger'

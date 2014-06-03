@@ -650,6 +650,29 @@ This uses the PostcodeAnywhere UK Geocode service, this will geocode any string 
 * **Limitations**: ?
 * **Notes**: To use PostcodeAnywhere you must include an API key: `Geocoder.configure(:lookup => :postcode_anywhere_uk, :api_key => 'your_api_key')`.
 
+#### PostcodeAnywhere Uk Address search (`:postcode_anywhere_address`, `postcode_anywhere_address_fetch`)
+
+These lookups use the PostcodeAnywhere Interactive Find and Interactive RetrieveById services; note that these are not true Geocoding services and do not return `coordinates`. These lookups can be used to find and verify addresses for given locations, for example find all addresses for a postcode and then find full address information for one or more of those results.
+
+```ruby
+# List of addresses for postcode
+results = Geocoder.search('N1 9AE', lookup: :postcode_anywhere_address)
+
+# Fetch extra information for a specific result
+# shortcut to Geocoder.search(50782641.00, lookup: :postcode_anywhere_address_fetch)
+results.first.fetch
+```
+
+* **API key**: required
+* **Quota**: Dependant on service plan?
+* **Region**: UK
+* **SSL support**: yes
+* **Languages**: English
+* **Documentation**: [http://www.postcodeanywhere.co.uk/Support/WebService/PostcodeAnywhere/Interactive/Find/1.1/](http://www.postcodeanywhere.co.uk/Support/WebService/PostcodeAnywhere/Interactive/Find/1.1/), [http://www.postcodeanywhere.co.uk/Support/WebService/PostcodeAnywhere/Interactive/RetrieveById/1.3/](http://www.postcodeanywhere.co.uk/Support/WebService/PostcodeAnywhere/Interactive/RetrieveById/1.3/)
+* **Terms of Service**: ?
+* **Limitations**: ?
+* **Notes**: To use PostcodeAnywhere you must include an API key: `Geocoder.configure(:lookup => :postcode_anywhere_address, :api_key => 'your_api_key')`.
+
 Caching
 -------
 
