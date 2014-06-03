@@ -650,7 +650,7 @@ This uses the PostcodeAnywhere UK Geocode service, this will geocode any string 
 * **Limitations**: ?
 * **Notes**: To use PostcodeAnywhere you must include an API key: `Geocoder.configure(:lookup => :postcode_anywhere_uk, :api_key => 'your_api_key')`.
 
-#### PostcodeAnywhere Uk Address search (`:postcode_anywhere_address`, `postcode_anywhere_address_fetch`)
+#### PostcodeAnywhere Uk Address search (`:postcode_anywhere_address`, `:postcode_anywhere_address_fetch`)
 
 These lookups use the PostcodeAnywhere Interactive Find and Interactive RetrieveById services; note that these are not true Geocoding services and do not return `coordinates`. These lookups can be used to find and verify addresses for given locations, for example find all addresses for a postcode and then find full address information for one or more of those results.
 
